@@ -1,0 +1,141 @@
+.mainContainer,
+.animate {
+  display: flex;
+  flex-direction: column;
+  font-family: "Avenir Next";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 100px;
+  background-color: rgb(255, 255, 255);
+  z-index: 4;
+}
+.animate {
+  animation-duration: 500ms;
+  animation-name: slideout;
+}
+@keyframes slideout {
+  from {
+    margin-left: 0%;
+    width: 100%;
+  }
+  to {
+    margin-left: 100%;
+    width: 300%;
+  }
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 60px;
+  background-color: rgb(52, 179, 121);
+  color: rgb(255, 255, 255);
+  padding-left: 12px;
+}
+.name {
+  font-size: 16px;
+  font-family: "Avenir Next Demi Bold";
+  margin: 0px;
+}
+.category {
+  font-size: 12px;
+  margin-top: 6px;
+  margin: 0px;
+}
+.details {
+  color: rgb(42, 42, 42);
+  font-size: 16px;
+  margin-left: 12px;
+}
+
+.address > p,
+.contact > p {
+  margin: 0px;
+}
+.address,
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.address {
+  margin-top: 16px;
+}
+.contact > p:nth-of-type(1) {
+  margin: 26px 0px;
+}
+
+.mapContainer {
+  height: 180px;
+}
+.popup > :nth-of-type(2) {
+  padding: 10px;
+}
+.popup {
+  color: rgb(52, 179, 121);
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .name {
+      font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .restaurant {
+    padding-left: 20px;
+  }
+  .details {
+    margin-left: 20px;
+  }
+  .name,
+  .details,
+  .address {
+    font-size: 18px;
+  }
+  .category {
+    font-size: 14px;
+  }
+  .map-container {
+    height: 250px;
+  }
+}
+@media (min-width: 1024px) {
+  .popup {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .restaurant {
+    padding-left: 30px;
+    height: 80px;
+  }
+  .details {
+    margin-left: 30px;
+  }
+  .name,
+  .details,
+  .address {
+    font-size: 24px;
+  }
+  .category {
+    font-size: 20px;
+  }
+  .map-container {
+    height: 400px;
+  }
+  .popup {
+    font-size: 18px;
+  }
+}

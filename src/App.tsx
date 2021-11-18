@@ -1,24 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import classes from "./App.module.css";
+import List from "./components/List";
+import Detail from "./components/Detail";
+import mapIcon from "./assets/mapIcon.png";
+import backArrow from "./assets/backArrow.png";
+import { useSelector, useDispatch } from "react-redux";
+import { AppState } from "./models/interfaces";
 
 function App() {
+  const dispatch = useDispatch();
+  const showDetail = useSelector((state: AppState) => state.showDetail);
+  const showList = useSelector((state: AppState) => state.showList);
+  const animate = useSelector((state: AppState) => state.animate);
+
+  const backHandler = (e: React.MouseEvent) => {
+    dispatch({ type: "setAnimate" });
+    setTimeout(() => {
+      dispatch({ type: "hideDetail" });
+    }, 500);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.app}>
+      <div className={classes.banner}>
+        <p>Lunch Tyme</p>
+        {showDetail && (
+          <img
+            src={backArrow}
+            alt=""
+            className={classes.backArrow}
+            onClick={backHandler}
+          />
+        )}
+        <img src={mapIcon} alt="" className={classes.mapIcon} />
+      </div>
+      <div className={animate ? classes.animate : ""}>
+        {showList && <List />}
+      </div>
+      {showDetail && <Detail />}
     </div>
   );
 }

@@ -1,0 +1,64 @@
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100px;
+  background-color: rgb(67, 232, 149);
+  color: rgb(255, 255, 255);
+  font-family: "Avenir Next Demi Bold";
+  font-size: 17px;
+  font-weight: bold;
+  position: relative;
+  font-family: "Avenir Next Demi Bold";
+}
+.mapIcon,
+.backArrow {
+  color: rgb(255, 255, 255);
+  display: flex;
+  position: absolute;
+}
+.mapIcon {
+  right: 0;
+  width: 50px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+.backArrow {
+  left: 0;
+  width: 14px;
+  margin-left: 12px;
+  margin-bottom: 20px;
+}
+/* Safari */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .mapIcon,
+    .backArrow {
+      bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .banner {
+    font-size: 20px;
+  }
+  .backArrow {
+    width: 20px;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .banner {
+    font-size: 25px;
+  }
+  .mapIcon {
+    margin-bottom: 12px;
+    width: 55px;
+  }
+  .backArrow {
+    margin-left: 30px;
+    width: 25px;
+  }
+}

@@ -1,0 +1,89 @@
+.restaurantsContainer, 
+.restaurantsHidden {
+  display: flex;
+  flex-direction: column;
+  font-family: "Avenir Next";
+}
+.restaurant {
+  max-height: 180px;
+  position: relative;
+  display: flex;
+}
+.image {
+  z-index: 1;
+  object-fit: cover;
+  width: 100%;
+}
+.gradient {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.infoContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.info {
+  z-index: 3;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 12px;
+}
+.name {
+  margin: 0px;
+  font-size: 16px;
+  font-family: "Avenir Next Demi Bold";
+}
+.category {
+  margin: 0px;
+  padding: 0px;
+  font-size: 12px;
+  margin: 6px 0px;
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .name {
+      font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .restaurant {
+    flex-direction: row;
+    width: 50%;
+  }
+  .restaurantsContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .name {
+    font-size: 18px;
+  }
+  .category {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .name {
+    font-size: 24px;
+  }
+  .category {
+    font-size: 20px;
+  }
+}
