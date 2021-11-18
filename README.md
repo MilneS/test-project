@@ -25,3 +25,5 @@ make a `.env` file in the root directory and include the following variables:
 open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
+### Live version of the app here:
+[https://milnes.github.io/test-project/](https://milnes.github.io/test-project/)
