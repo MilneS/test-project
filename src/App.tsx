@@ -1,6 +1,6 @@
 import classes from "./App.module.css";
-import List from "./components/List";
-import Detail from "./components/Detail";
+import List from "./components/list/List";
+import Detail from "./components/detail/Detail";
 import mapIcon from "./assets/mapIcon.png";
 import backArrow from "./assets/backArrow.png";
 import { useSelector, useDispatch } from "react-redux";

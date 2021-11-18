@@ -1,7 +1,7 @@
 import classes from "./List.module.css";
-import listGradient from "../assets/ListGradient.png";
+import listGradient from "../../assets/ListGradient.png";
 import { useEffect } from "react";
-import { Restaurant, RestaurantList, AppState } from "../models/interfaces";
+import { Restaurant, RestaurantList, AppState } from "../../models/interfaces";
 import { useSelector, useDispatch } from "react-redux";
 
 const List = () => {

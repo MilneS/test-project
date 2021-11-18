@@ -1,6 +1,6 @@
 import classes from "./Detail.module.css";
 import { useSelector } from "react-redux";
-import { AppState } from "../models/interfaces";
+import { AppState } from "../../models/interfaces";
 import { useRef, useEffect } from "react";
 import mapboxgl from "mapbox-gl";
 

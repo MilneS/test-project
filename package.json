@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@types/mapbox-gl": "^2.4.2"
+    "@types/mapbox-gl": "^2.4.2",
+    "gh-pages": "^3.2.3"
   }
 }
